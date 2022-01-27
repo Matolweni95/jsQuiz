@@ -1,0 +1,63 @@
+mat-card{
+    width: 400px;
+    height: 400px;
+}
+
+body{
+    background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(97,186,255,1) 0%, rgba(166,239,253,1) 90.1% );
+}
+
+p{
+    font-family: 'Roboto', sans-serif;
+    line-height: 26px;
+    font-size: 20px;
+}
+
+h1{
+    font-size: 30px;
+}
+
+.question{
+    background-image: url(/assets/question.png);
+    background-position: -14% -10%;
+    background-size: 150px;
+    background-repeat: no-repeat;
+}
+
+.answer{
+    background-image: url(/assets/answer.png);
+    background-position: -14% -10%;
+    background-size: 150px;
+    background-repeat: no-repeat;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 100px;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex-direction: column;
+}
+
+img{
+    width: 150px;
+    position: relative;
+   
+    z-index: 1;
+    
+}
+
+mat-form-field{
+width: 350px;
+text-align: center;
+}
+
+
