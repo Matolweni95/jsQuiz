@@ -1,0 +1,21 @@
+
+<div mat-dialog-content>
+    <h1>Assigning the Value of One Variable to Another</h1>
+    <h3>After a value is assigned to a variable using the assignment operator, 
+        you <br> can assign the value of that variable to another variable using the <br>assignment operator.</h3>
+    <pre>
+        var myVar;
+        myVar = 5;
+        var myNum;
+        myNum = myVar;
+    </pre>
+    <p>The above declares a myVar variable with no value, then assigns it the value 5. <br>
+        Next, a variable named myNum is declared with no value. Then, the contents of <br>
+        myVar (which is 5) is assigned to the variable myNum. Now, myNum also has the <br>
+        value of 5
+    </p>
+   
+</div>
+<div mat-dialog-actions>
+  <button mat-button color="warn" (click)="onNoClick()">Close</button>
+</div>

@@ -1,21 +1,16 @@
-import { Component, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { OperatorHintComponent } from '../operator-hint/operator-hint.component'; 
 import { FormBuilder, FormGroup } from '@angular/forms';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { HintboxComponent } from './hintbox/hintbox.component';
-import { SuccessboxComponent } from './successbox/successbox.component';
-import { FailboxComponent } from './failbox/failbox.component';
-
-export interface DialogData {
-  animal: string;
-  name: string;
-}
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { OperatorSuccessComponent } from '../operator-success/operator-success.component'; 
+import { FailboxComponent } from '../failbox/failbox.component';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-assignment-operator',
+  templateUrl: './assignment-operator.component.html',
+  styleUrls: ['./assignment-operator.component.css']
 })
-export class AppComponent {
+export class AssignmentOperatorComponent {
   animal!: string;
   name!: string;
   result = "";
@@ -23,9 +18,7 @@ export class AppComponent {
   test:any;
 
   array:any [] = ["1"];
-  answers: any [] = ["letvalues=[0,1,2,3,4,5];",
-                     "constvalues=[0,1,2,3,4,5];",
-                     "varvalues=[0,1,2,3,4,5];"
+  answers: any [] = ["a=7;",
                     ]
 
   myForm!: FormGroup;
@@ -38,14 +31,13 @@ export class AppComponent {
   }
 
   openDialog() {
-   this.dialog.open(HintboxComponent);
+   this.dialog.open(OperatorHintComponent);
   }
 
   submit(){
     let type = (<HTMLInputElement>document.getElementById('a')).value;
     this.test = type.replace(/ /g,'');
-    console.log(this.answers);
-    console.log(this.test)
+
     for(let i = 0; i < this.answers.length; i++){
       if(this.test == this.answers[i]){
         this.result = "pass";
@@ -56,14 +48,12 @@ export class AppComponent {
     }
 
     if(this.result == "pass"){
-      this.dialog.open(SuccessboxComponent);
+      this.dialog.open(OperatorSuccessComponent);
     }else{
       this.dialog.open(FailboxComponent);
     }
     
      
   }
+
 }
-
-
-

@@ -13,19 +13,38 @@ import { ReactiveFormsModule } from '@angular/forms';
 import {MatDialogModule} from '@angular/material/dialog';
 import { HintboxComponent } from './hintbox/hintbox.component';
 import { SuccessboxComponent } from './successbox/successbox.component';
-import { FailboxComponent } from './failbox/failbox.component'; 
+import { FailboxComponent } from './failbox/failbox.component';
+import { AssignmentOperatorComponent } from './assignment-operator/assignment-operator.component';
+import { ArrayDelcarationComponent } from './array-delcaration/array-delcaration.component';
+import { OperatorHintComponent } from './operator-hint/operator-hint.component';
+import { OperatorSuccessComponent } from './operator-success/operator-success.component';
+import { ValueAssignmentComponent } from './value-assignment/value-assignment.component';
+import { AssignmentSuccessComponent } from './assignment-success/assignment-success.component';
+import { AssignmentHintComponent } from './assignment-hint/assignment-hint.component';
+import { CompleteComponent } from './complete/complete.component';
+import { ValueAssignmentaltComponent } from './value-assignmentalt/value-assignmentalt.component'; 
 
 @NgModule({
   declarations: [
     AppComponent,
     HintboxComponent,
     SuccessboxComponent,
-    FailboxComponent
+    FailboxComponent,
+    AssignmentOperatorComponent,
+    ArrayDelcarationComponent,
+    OperatorHintComponent,
+    OperatorSuccessComponent,
+    ValueAssignmentComponent,
+    AssignmentSuccessComponent,
+    AssignmentHintComponent,
+    CompleteComponent,
+    ValueAssignmentaltComponent
   ],
   entryComponents:[
     HintboxComponent,
     SuccessboxComponent,
-    FailboxComponent
+    FailboxComponent,
+    OperatorHintComponent
   ]
   ,
   imports: [

@@ -1,9 +1,9 @@
-import { Component, Inject } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-import { HintboxComponent } from './hintbox/hintbox.component';
-import { SuccessboxComponent } from './successbox/successbox.component';
-import { FailboxComponent } from './failbox/failbox.component';
+import { HintboxComponent } from '../hintbox/hintbox.component';
+import { SuccessboxComponent } from '../successbox/successbox.component';
+import { FailboxComponent } from '../failbox/failbox.component';
 
 export interface DialogData {
   animal: string;
@@ -11,11 +11,11 @@ export interface DialogData {
 }
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-array-delcaration',
+  templateUrl: './array-delcaration.component.html',
+  styleUrls: ['./array-delcaration.component.css']
 })
-export class AppComponent {
+export class ArrayDelcarationComponent {
   animal!: string;
   name!: string;
   result = "";
@@ -44,8 +44,7 @@ export class AppComponent {
   submit(){
     let type = (<HTMLInputElement>document.getElementById('a')).value;
     this.test = type.replace(/ /g,'');
-    console.log(this.answers);
-    console.log(this.test)
+
     for(let i = 0; i < this.answers.length; i++){
       if(this.test == this.answers[i]){
         this.result = "pass";
@@ -64,6 +63,3 @@ export class AppComponent {
      
   }
 }
-
-
-
